@@ -1,5 +1,9 @@
 const album = require("../models/Album");
 
+exports.homeGet = async (req, res) => {
+  res.send("Bienvenidos");
+};
+
 exports.allAlbumsGet = async (req, res) => {
   const albums = await album.find({});
   res.json(albums);

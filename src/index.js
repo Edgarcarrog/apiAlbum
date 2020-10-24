@@ -28,7 +28,7 @@ app.use(express.json());
 
 //routes
 const router = require("./routes/index");
-app.use('/api', router);
+app.use('/', router);
 
 app.listen(app.get("port"), () => {
   console.log(`Server on port ${app.get("port")}`);
