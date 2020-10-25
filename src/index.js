@@ -20,7 +20,7 @@ mongoose
   )
   .catch((err) => console.error("Error connecting to mongo", err));
 
-app.set("port", process.env.PORT1 || process.env.PORT2);
+app.set("port", process.env.PORT || "https://apialbums-ecg.herokuapp.com/");
 
 //Middlewares
 app.use(express.urlencoded({ extended: false }));
