@@ -1,7 +1,11 @@
 const album = require("../models/Album");
 
 exports.homeGet = async (req, res) => {
-  res.send("<h2>REST Base url: https://rickandmortyapi.com/api/ The base url contains information about all available API's resources. All requests are GET requests and go over https. All responses will return data in json.</h2>");
+  const api ={
+    albums: "https://apialbums-ecg.herokuapp.com/api/allAlbums",
+    randomAlbum: "https://apialbums-ecg.herokuapp.com/api/randomAlbum"
+    };
+  res.json(api);
 };
 
 exports.allAlbumsGet = async (req, res) => {
